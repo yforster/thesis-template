@@ -68,6 +68,7 @@
   hcentering%
 }%
 
+\newcommand\coqref[1]{\ref{coq:#1}}
 
 \renewcommand{\author}[1]{\def\theauthor{#1}}
 \renewcommand{\title}[1]{\def\thetitle{#1}}
@@ -80,7 +81,7 @@
 \newcommand{\thesistype}[1]{\def\thethesistype{#1}}
 \newcommand{\subdate}[3]{\def\thesubday{#1} \def\thesubmonth{#2} \def\thesubyear{#3} }
 \newcommand{\city}[1]{\def\thecity{#1}}
-
+\newcommand{\coqUrl}[1]{\def\baseurl{#1}}
 
 \newcommand{\maketitlepage}{
 \begin{titlepage}
