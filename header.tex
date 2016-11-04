@@ -45,7 +45,7 @@
 \usepackage{natbib}
 \bibpunct{[}{]}{,}{n}{,}{;}
 
-\usepackage[breaklinks, draft=false]{hyperref}
+\usepackage[breaklinks, draft=false, pdfusetitle]{hyperref}
 
 \input{Macros.tex}
 
@@ -74,8 +74,8 @@
 
 \newcommand\coqref[1]{\ref{coq:#1}}
 
-\renewcommand{\author}[1]{\def\theauthor{#1}}
-\renewcommand{\title}[1]{\def\thetitle{#1}}
+\newcommand{\setauthor}[1]{\author{#1}\def\theauthor{#1}}
+\newcommand{\settitle}[1]{\title{#1}\def\thetitle{#1}}
 
 \newcommand{\advisor}[1]{\def\theadvisor{#1}}
 \newcommand{\reviewerOne}[1]{\def\thereviewerOne{#1}}
