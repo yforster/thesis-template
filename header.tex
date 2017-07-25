@@ -88,55 +88,61 @@
 \newcommand{\coqUrl}[1]{\def\baseurl{#1}}
 
 \newcommand{\maketitlepage}{
-\begin{titlepage}
-\begin{center}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+  \begin{titlepage}
+    \begin{center}
+      \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+      \begin{minipage}{0.2\textwidth}
+        \includegraphics[width=0.9\textwidth]{logo.eps}
+      \end{minipage}
+      \begin{minipage}{0.7\textwidth}
+        \centering \textsc{{\Huge \theuniversity}}
 
-\textsc{{\Huge \theuniversity}}\\
-\textsc{\thefaculty}\\[1.5cm]
+        \centering \textsc{\footnotesize \thefaculty}
+      \end{minipage}
+      \vspace{1cm}
 
-\textsc{\thethesistype Thesis}\\[0.3cm]
+      \textsc{\thethesistype Thesis}\\[0.3cm]
+      % Title
+      \HRule \\[0.4cm]
+      { \Huge \scshape \thetitle \\[0.4cm] }
 
-% Title
-\HRule \\[0.4cm]
-{ \Huge \scshape \thetitle \\[0.4cm] }
+      \HRule \\[1.5cm]
 
-\HRule \\[1.5cm]
+      % Author and supervisor
+      \noindent
+      \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \Large
+          \emph{Author}\\
+          \theauthor
+        \end{flushleft}
+      \end{minipage}%
+      \begin{minipage}{0.4\textwidth}
+        \begin{flushright} \Large
+          \emph{Advisor} \\
+          \theadvisor
 
-% Author and supervisor
-\noindent
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \Large
-\emph{Author:}\\
-\theauthor
-\end{flushleft}
-\end{minipage}%
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \Large
-\emph{Advisor:} \\
-\theadvisor
+        \end{flushright}
+      \end{minipage}
 
-\end{flushright}
-\end{minipage}
+      \noindent
+      \begin{minipage}{1\textwidth}
+        \vspace{7cm}
+        \begin{center} \large
+          \emph{Reviewers} \\
+          \thereviewerOne\\
+          \thereviewerTwo
+        \end{center}
+      \end{minipage}
 
-\noindent
-\begin{minipage}{1\textwidth}
-\vspace{7cm}
-\begin{center} \large
-\emph{Reviewers:} \\
-\thereviewerOne\\
-\thereviewerTwo
-\end{center}
-\end{minipage}
+      \vfill
 
-\vfill
+      {\large Submitted: \thesubday\textsuperscript{th} \thesubmonth~\thesubyear}
 
-{\large Submitted: \thesubday\textsuperscript{th} \thesubmonth~\thesubyear}
-
-\end{center}
-\end{titlepage}
+    \end{center}
+  \end{titlepage}
 }
+
 
 
 \newcommand{\statementpage}{
@@ -179,3 +185,8 @@ Computer Science Department.
 }
 
 \makeatother
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "thesis"
+%%% End:
