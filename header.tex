@@ -26,6 +26,8 @@
 \usepackage{wrapfig}
 \usepackage[nottoc]{tocbibind}
 \usepackage{caption}
+\usepackage{coqtheorem}
+
 
 % For the font
 \usepackage[T1]{fontenc}
@@ -45,7 +47,7 @@
 \usepackage{natbib}
 \bibpunct{[}{]}{,}{n}{,}{;}
 
-\usepackage[breaklinks, draft=false, pdfusetitle]{hyperref}
+%\usepackage[breaklinks, draft=false, pdfusetitle]{hyperref}
 
 \input{Macros.tex}
 
@@ -72,8 +74,6 @@
   hcentering%
 }%
 
-\newcommand\coqref[1]{\ref{coq:#1}}
-
 \newcommand{\setauthor}[1]{\author{#1}\def\theauthor{#1}}
 \newcommand{\settitle}[1]{\title{#1}\def\thetitle{#1}}
 
@@ -85,7 +85,6 @@
 \newcommand{\thesistype}[1]{\def\thethesistype{#1}}
 \newcommand{\subdate}[3]{\def\thesubday{#1} \def\thesubmonth{#2} \def\thesubyear{#3} }
 \newcommand{\city}[1]{\def\thecity{#1}}
-\newcommand{\coqUrl}[1]{\def\baseurl{#1}}
 
 \newcommand{\maketitlepage}{
 
@@ -93,7 +92,7 @@
     \begin{center}
       \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
       \begin{minipage}{0.2\textwidth}
-        \includegraphics[width=0.9\textwidth]{logo.eps}
+        \includegraphics[draft=false,width=0.9\textwidth]{logo.eps}
       \end{minipage}
       \begin{minipage}{0.7\textwidth}
         \centering \textsc{{\Huge \theuniversity}}
